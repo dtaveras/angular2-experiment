@@ -1,0 +1,18 @@
+{
+  "disableCompileOnSave": true,
+  "compilerOptions": {
+	   "target": "ES5",
+	   "module": "system",
+	   "sourceMap": true,
+	   "emitDecoratorMetadata": true,
+	   "experimentalDecorators": true,
+	   "moduleResolution": "node",
+	   "removeComments": false,
+    },
+  "files":[
+	  "hello_world.ts"
+    ],
+  "exclude": [
+	  "node_modules"
+  ]
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular 2 QuickStart</title>
+    <!-- Meta tag to ensure proper scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <!-- 1. Load libraries -->
+    <script src="https://rawgithub.com/systemjs/systemjs/0.19.6/dist/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.0/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.0/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.0/angular2.dev.js"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js></script>
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        transpiler: 'typescript',
+        typescriptOptions: { emitDecoratorMetadata: true },
+        packages: {'src': {defaultExtension: 'ts'}}
+      });
+    </script>
+    <!-- 3. Bootstrap -->
+    <script>
+      System.import('angular2/platform/browser').then(function(ng){
+        System.import('src/hello_world').then(function(src) {
+          <!-- Starts Application -->
+          ng.bootstrap(src.HelloWorld);
+        });
+      });
+    </script>
+  </head>
+  <!-- 4. Display the application -->
+  <body>
+
+    <div id="main-container">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    <div id="page-wrapper">
+      <nav class="navbar navbar-default">
+          <div id="options-header" class="navbar-header" onclick="openSideBar()">
+            <a class="navbar-brand" href="#">
+              <span class="glyphicon glyphicon-menu-hamburger" style="font-size: 30px;" aria-hidden="true"></span>
+            </a>
+          </div>
+          <span>hello :)</span>
+          <p class="navbar-text app-header">Paterson Sales</p>
+          <!--<button type="button" class="btn btn-default navbar-btn" style="float:right;">Sign in</button>-->
+      </nav>
+
+      <hello-world>Loading...</hello-world>
+
+    </div>
+
+    </div>
+    <script>
+      var openSideBar = function(){
+        console.log("opening side bar");
+        $('#main-container').toggleClass('sidebar-open');
+      }
+    </script>
+  </body>
+</html>
