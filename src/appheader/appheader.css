@@ -1,0 +1,33 @@
+.appbar {
+  margin: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 5px 2px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 2px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 2px -2px rgba(0,0,0,0.75);
+}
+.appbar-menu {
+  padding: 0px 12px 0px 12px;
+  font-size: 30px;
+  background-color: black;
+}
+.appbar-menu span {
+  line-height: inherit;
+  color: white;
+}
+.appbar-title {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  width: 100%;
+}
+.appbar-about {
+  padding: 5px 12px 0px 12px;
+  font-size: 40px;
+}
+
+.appbar-entry {
+  display: table-cell;;
+  vertical-align: middle;
+  /*border-style: dotted;*/
+  border-color: red;
+}
