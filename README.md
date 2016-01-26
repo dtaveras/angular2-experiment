@@ -6,3 +6,9 @@ Current Status:
 
 Upcoming Features:
 - add gulp task to compile ts and create target output folder
+
+How to Run:
+install pip using easy_install
+install flask using pip
+
+Run: 'python main.py'
