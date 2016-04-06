@@ -41,16 +41,16 @@ def upload_file():
     return '''
     <!doctype html>
     <title>Upload new File</title>
-    <h1>Upload new File</h1>
+    <h1>Uploading new File</h1>
     <form action="/upload" method=post enctype=multipart/form-data>
-      <p><input type=file name=file accept="image/*" capture>
+      <p><input type=file name=file>
          <input type=submit value=Upload>
     </form>
     '''
 
-@app.route('/<path:path>')
+#@app.route('/<path:path>')
 def unknown(path):
     return "Unknown path: " + path
 
 if __name__ == '__main__':
-    app.run(debug=False,host='0.0.0.0',port=8889)
+    app.run(debug=False,port=8889)

@@ -11,7 +11,7 @@ import {Component, Input} from 'angular2/core';
     <div class="appbar-entry appbar-title">
       <div>{{appTitle}}</div>
     </div>
-    <div class="appbar-entry appbar-about" (click)="aboutClick">
+    <div class="appbar-entry appbar-about" (click)="aboutClick()">
       <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
     </div>
   </div>`,
